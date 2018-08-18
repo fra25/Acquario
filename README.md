@@ -1,12 +1,25 @@
-# Acquario
-Sketch for controll Aquarium
-#include <DallasTemperature.h>
+// (dht),ventola,riscaldatore,led rgb,lcd,allrme,pulsante.
+// LCD RS pin to digital pin 12
+// LCD Enable pin to digital pin 11
+// LCD D4 pin to digital pin 5
+// LCD D5 pin to digital pin 4
+// LCD D6 pin to digital pin 3
+// LCD D7 pin to digital pin 2
+// Fan Relè connect to pin 38
+// Fan's led connect to pin 39
+// Heater connect to pin 48
+// Heater's led connect to pin 49
+// RGB led connect to pin 28
+// Allarm relè connect to pin 18
+// Dht pin connnect to pin 13
+// Puls's pin connect to pin 20
+#include <DallasTemperature.h>                                                    
 #include <OneWire.h>
-#include <LiquidCrystal.h>                    // (dht),ventola,riscaldatore,led rgb,lcd,allrme,pulsante.
-LiquidCrystal lcd(12, 11, 5, 4, 3, 2);
+#include <LiquidCrystal.h>                
+LiquidCrystal lcd(12, 11, 5, 4, 3, 2);    
 int V = 38; // ventola
 int LV = 39; // led ventola
-int RGB = 28; // riscaldatore
+int RGB = 28; // led rgb
 int LR = 29; //led riscaldatore
 int R = 48; // RGB 
 int ALL = 18; // allarme
@@ -76,4 +89,4 @@ void loop (){
   }
   else 
   digitalWrite(RGB,LOW);
-}
+}  
